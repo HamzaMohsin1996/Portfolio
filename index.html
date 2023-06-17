@@ -7,6 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
   <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -73,15 +77,65 @@
     <div class="custom-container">
       <section class="banner-section">
           <div class="container">
-            <div class="row">
-              <div class="col-lg-7"></div>
-              <div class="col-lg-5"></div>
+            <div class="row align-items-center">
+              <div class="col-lg-7 animate__animated animate__backInLeft">
+                <h1 class="mb-xl-4 mb-3">Distinctly Designed. Brilliantly Built.</h1>
+                <h5 class="mb-xl-5 mb-4">Helping you deliver custom & scalable mobile experiences with the potential to change the world.</h5>
+                <button class="custom-primary-btn"><span>Schedule a Consultation</span></button>
+              </div>
+              <div class="col-lg-5">
+                <img src="./Images/banner-img.png" alt="Banner Image">
+              </div>
             </div>
           </div>
       </section>
+      <section class="growth-section" style="background-image: url(./Images/growth-bg-left.svg), url(./Images/growth-bg-right.svg);">
+          <div class="medium-container">
+            <div class="row align-items-center g-4">
+              <div class="col-xl-4 animate__animated animate__backInLeft">
+                <p class="text-small font-semibold mb-1">Oure Servies</p>
+                <h3 class="font-semibold mb-3">Create Growth for your Business</h3>
+                <p class="text-small text-black mb-xl-5 mb-4">We will empower your business via optimal solution</p>
+                <button class="custom-primary-btn"><span>Get Start Now</span></button>
+              </div>
+              <div class="col-xl-8 animate__animated animate__backInRight">
+                <div class="row">
+                  <div class="col-sm-6 mb-sm-5 mb-3">
+                    <div class="blue-box-wrapper mb-2">
+                          <img src="./Images/consult.svg" alt="Consult Icon">
+                    </div>
+                    <p class="font-semibold mb-3">Consulting</p>
+                    <p class="text-small text-black ">Remove the guesswork. Consult with our Business Experts. </p>
+                  </div>
+                  <div class="col-sm-6 mb-sm-5 mb-3">
+                    <div class="blue-box-wrapper mb-2">
+                          <img src="./Images/implementation.svg" alt="Implementation Icon">
+                    </div>
+                    <p class="font-semibold mb-3">Implementation</p>
+                    <p class="text-small text-black ">We deliver end-to-end business solutions across all domains. </p>
+                  </div>
+                  <div class="col-sm-6  mb-sm-5 mb-3">
+                    <div class="blue-box-wrapper mb-2">
+                          <img src="./Images/managed-services.svg" alt="Managed Services Icon">
+                    </div>
+                    <p class="font-semibold mb-3">Managed Services</p>
+                    <p class="text-small text-black ">24/7 Managed Services support for secure digital investments.</p>
+                  </div>
+                  <div class="col-sm-6  mb-sm-5 mb-3">
+                    <div class="blue-box-wrapper mb-2">
+                          <img src="./Images/bpo.svg" alt="Bpo Icon">
+                    </div>
+                    <p class="font-semibold mb-3">BPO</p>
+                    <p class="text-small text-black ">Enhance your workforce with our expert BPO teams.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
     </div>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-  <script src="/Bootstrap/js/bootstrap.min.js"></script>
+  <script src="./Js/jquery.min.js" ></script>
+  <script src="./Bootstrap/js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

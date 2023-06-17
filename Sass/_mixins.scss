@@ -39,7 +39,7 @@
   }
   
   // Mixin for applying a box-shadow
-  @mixin box-shadow($shadow) {
+  @mixin box-shadow-same($shadow) {
     box-shadow: $shadow;
   }
   
@@ -72,20 +72,17 @@
   @mixin margin-all-diff($top,$left,$right,$bottom) {
     margin: $top $left $right $bottom;
   }
-  @mixin margin-left($left) {
-    margin-left: $left;
-  }
   @mixin margin-right($right) {
-    margin-left: $right;
+    margin-right: $right;
   }
   @mixin margin-top($top) {
-    margin-left: $top;
+    margin-top: $top;
   }
   @mixin margin-left($left) {
     margin-left: $left;
   }
   @mixin margin-bottom($bottom) {
-    margin-left: $bottom;
+    margin-bottom: $bottom;
   }
   @mixin margin-top-bottom($top,$y-axis,$bottom){
     margin: $top $y-axis $bottom;
@@ -126,7 +123,10 @@
 }
 // Background color gradient
 @mixin background-color($bgColor){
-  background:$bgColor;
+  background-color:$bgColor;
+}
+@mixin background($value){
+  background: $value;
 }
 
 // Width and height Mixin
@@ -176,7 +176,13 @@
       @content;
     }
   }
+  @if $size == large-desktop {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  }
 }
+
 
 @mixin display-none{
   display: none;
@@ -201,4 +207,25 @@
 }
 @mixin z-index($value){
   z-index: $value;
+}
+
+@mixin font-family{
+  font-family: 'Inter', sans-serif; 
+}
+@mixin outline-none{
+  outline: none;
+}
+@mixin grey-gradient{
+  background: linear-gradient(293.86deg, rgba(235, 235, 235, 0.16) -0.99%, rgba(245, 245, 245, 0.71) 98.77%);;
+}
+@mixin max-width($value){
+  max-width: $value;
+}
+@mixin top($value){
+  top: $value;
+}
+@mixin background-multiple{
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 311px 263px;
 }
