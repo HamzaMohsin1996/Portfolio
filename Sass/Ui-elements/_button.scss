@@ -1,0 +1,93 @@
+.custom-primary-btn{
+    @include background-color($primry-clr);
+    @include  spacing-all-diff(10px,15px,10px,15px);
+    @include  font-size(18px);
+    @include  border-none;
+    @include  border-radius(4px);
+    @include font-weight(500);
+    @include position(relative);
+    @include transition (.3s ease);
+    span{
+        @include gradient-color-text;
+    }
+    &:hover{
+        @include background-color(transparent);
+        @include border(1px, solid, $border-hover-clr);
+    }
+}
+.custom-btn-round{
+    @include width(40px);
+    @include height(40px);
+    @include  border-radius(4px);
+    @include background-color($primry-clr);
+    @include  spacing-same(8px);
+    @include  border-none;
+    @include transition (.3s ease);
+    &:hover{
+        @include background-color(transparent);
+        @include border(1px, solid, $border-hover-clr);
+    }
+}
+.toggle-button-wrapper{
+    @include position(relative);
+    @include z-index(999);
+    .toggle-button{
+        @include background-color(transparent);
+        @include border-radius(5px);
+        @include border(2px,solid, $border-hover-clr);
+        @include width(50px);
+        @include height(50px);
+        @include center-element;
+        @include flex-flow;
+        @include display-none;
+        @include breakpoint(mobile){
+            @include display(flex);
+        }
+        .menu-line{
+            @include display(block);
+            @include width(17px);
+            @include height(2px);
+            @include margin-top-bottom(4.5px,0,5px);
+            @include border-radius-different(2px,0,0,2px);
+            @include background-color($border-hover-clr);
+            @include transition (500ms);
+            @include  transform-origin(right,center);
+            &:nth-child(4){
+                @include border-radius-different(0,2px,2px,0);
+                @include  transform-origin(left,center);
+            } 
+            &:nth-child(5){
+                @include border-radius-different(0,2px,2px,0);
+                @include  transform-origin(left,center);
+            } 
+            &:nth-child(6){
+                @include border-radius-different(0,2px,2px,0);
+                @include  transform-origin(left,center);
+            } 
+        }
+        &.active{
+            .menu-line{
+                &:nth-child(odd) {
+                    @include transform-both-axis(14px,45deg);
+                }
+                &:nth-child(even){
+                    @include transform-scale(0);
+                }
+                &:nth-child(3) {
+                    @include transform-both-axis(-11px,-45deg);
+                }
+                &:nth-child(4) {
+                    @include transform-both-axis(13px,-45deg);
+
+                }
+                &:nth-child(5){
+                    @include transform-scale(0);
+                }
+                &:nth-child(6) {
+                    @include transform-both-axis(-10px,45deg);
+
+                }
+            }
+        }
+    }
+}

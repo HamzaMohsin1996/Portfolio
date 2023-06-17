@@ -1,0 +1,80 @@
+@import "../variables"; // Import your custom variables if needed
+/* Header styles */
+.header {
+  @include between-element;
+  @include spacing-both-side(20px, 0);
+  @include position-fixed;
+  @include breakpoint(mobile){
+    @include flex-col;
+    @include flex-align-start;
+   }
+  &.sticky{
+    // @include border-bottom(1px,solid,$dark-blue);
+    @include box-shadow(0px,2px,10px,$dark-blue);
+  }
+  .logo {
+    @include font-size(24px);
+    @include font-weight(bold);
+  }
+  .nav {
+    @include breakpoint(mobile){
+      @include margin-top(10px);
+     }
+     &.navmenu-mobile{
+      @include breakpoint(mobile){
+        @include position-fixed;
+        @include flex-col();
+        @include items-start;
+        @include background-color($transparent-layer);
+        @include width(100%);
+        @include height(100%);
+        @include spacing-both-side(20px,40px);
+        @include margin-same(0);
+        @include display-none;
+      }
+     }
+    ul {
+      @include list-none;
+      @include flex-only;
+      @include breakpoint(mobile){
+        @include flex-col;
+        @include items-start;
+       }
+      li {
+        @include margin-left(10px);
+        @include breakpoint(mobile){
+          @include margin-left(0);
+          @include margin-bottom(0); 
+         }
+        &:first-child {
+          @include margin-left(0);
+        }
+        a {
+          @include color($dark-blue);
+         @include text-dec-none;
+         @include text-transform(capitalize);
+         @include spacing-both-side(0, 25px);
+         @include font-weight(500);
+         @include breakpoint(tablet){
+          @include spacing-both-side(0, 5px);
+         }
+            @include breakpoint(mobile){
+              @include spacing-both-side(10px, 0);
+              @include flex-only;
+            }
+        
+        }
+      }
+    }
+  }
+  &.active{
+    .nav{
+      &.navmenu-mobile{
+       
+        @include breakpoint(mobile){
+          @include display(flex);
+        }
+      }
+    }
+  }
+}
