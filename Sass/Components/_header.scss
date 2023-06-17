@@ -4,6 +4,8 @@
   @include between-element;
   @include spacing-both-side(20px, 0);
   @include position-fixed;
+  @include grey-gradient;
+  @include z-index(1000);
   @include breakpoint(mobile){
     @include flex-col;
     @include flex-align-start;
@@ -11,6 +13,7 @@
   &.sticky{
     // @include border-bottom(1px,solid,$dark-blue);
     @include box-shadow(0px,2px,10px,$dark-blue);
+    @include background-color($white-clr);
   }
   .logo {
     @include font-size(24px);
@@ -49,12 +52,16 @@
         &:first-child {
           @include margin-left(0);
         }
-        a {
+        a{
           @include color($dark-blue);
          @include text-dec-none;
          @include text-transform(capitalize);
          @include spacing-both-side(0, 25px);
          @include font-weight(500);
+         @include transition(.3 ease);
+         &:hover{
+          @include color($border-hover-clr);
+         }
          @include breakpoint(tablet){
           @include spacing-both-side(0, 5px);
          }

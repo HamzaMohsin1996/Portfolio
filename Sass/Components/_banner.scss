@@ -1,0 +1,13 @@
+.banner-section{
+    @include grey-gradient;
+    @include spacing-top(80px);
+    @include spacing-bottom(140px);
+    @include breakpoint(large-desktop){
+        @include spacing-bottom(40px);  
+    } 
+    img{
+        @include breakpoint(large-desktop){
+            max-height: 480px;
+        }
+    }
+}
