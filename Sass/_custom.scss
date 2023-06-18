@@ -62,3 +62,9 @@
 .font-weight-600{
    @include font-weight(600);
 }
+.text-black-full{
+   @include color($black-clr-dark);
+}
+.primary-clr{
+   @include color($primry-clr);
+}

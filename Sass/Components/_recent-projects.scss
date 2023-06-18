@@ -1,0 +1,10 @@
+.recent-projects{
+    @include background-color($white-clr);
+    @include spacing-both-side(120px,0);
+    .header-content{
+        h3{
+            @include max-width(430px);
+            @include margin-top-bottom(16px,auto,0);
+        }
+    }
+}
