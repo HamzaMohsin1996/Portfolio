@@ -1,141 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scratch Project</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
-  <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header class="header" id="header-wrapper">
-      <div class="container flex-center">
-        <svg width="78" height="38" viewBox="0 0 78 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M38.7855 4.86963L55.7272 28.9851L72.1929 0.27832H68.5702L55.6721 22.3434L40.304 0.27832H38.7855H37.2674L21.8993 22.3434L9.00119 0.27832H5.37854L21.8443 28.9851L38.7855 4.86963Z" fill="url(#paint0_linear_117_48)"/>
-          <path d="M73.1804 0.27832L55.7547 30.4785L38.7855 6.20697L21.8167 30.4785L4.39052 0.27832H0L21.5149 37.7218L31.48 23.422L38.7855 12.938L46.0914 23.422L56.0565 37.7218L77.5714 0.27832H73.1804Z" fill="url(#paint1_linear_117_48)"/>
-          <path d="M38.7855 23.2573H31.5948L29.6743 26.0137H38.7855H47.8971L45.9766 23.2573H38.7855Z" fill="url(#paint2_linear_117_48)"/>
-          <defs>
-          <linearGradient id="paint0_linear_117_48" x1="10.5" y1="5.0894" x2="28.2691" y2="41.4853" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#26289F"/>
-          <stop offset="1" stop-color="#2442BA"/>
-          </linearGradient>
-          <linearGradient id="paint1_linear_117_48" x1="5.94607" y1="6.55363" x2="30.7338" y2="51.7458" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#26289F"/>
-          <stop offset="1" stop-color="#2442BA"/>
-          </linearGradient>
-          <linearGradient id="paint2_linear_117_48" x1="31.0711" y1="23.7193" x2="31.7936" y2="27.9228" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#26289F"/>
-          <stop offset="1" stop-color="#2442BA"/>
-          </linearGradient>
-          </defs>
-          </svg>
-          
-        <nav class="nav navigation-links navmenu-mobile">
-          <ul class="flex-center">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Expertise</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li>
-              <button class="custom-btn-round">
-                <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_117_72)">
-                <path d="M22.1334 22.9992C22.1131 22.9992 22.0924 22.9992 22.0718 22.9973C10.5186 22.2566 5.18793 16.3286 2.74983 11.486C1.13512 8.25054 0.275866 4.69079 0.236816 1.07502C0.243678 0.829859 0.343726 0.596536 0.516583 0.422554C0.68944 0.248571 0.922106 0.147012 1.16721 0.138559L5.16094 0.000844402C5.29268 -0.00380692 5.42399 0.0186133 5.54672 0.0667178C5.66946 0.114822 5.78103 0.187587 5.87453 0.280518C5.96803 0.37345 6.04148 0.484577 6.09033 0.607019C6.13918 0.729461 6.1624 0.86062 6.15855 0.992392C6.18598 2.85694 6.49835 4.70633 7.08482 6.47646C7.16326 6.71649 7.14439 6.97771 7.03227 7.20397C6.92014 7.43024 6.72371 7.60346 6.48521 7.68642L5.37275 8.07202C5.25317 8.11362 5.12657 8.13126 5.00018 8.12392C4.87378 8.11659 4.75007 8.08444 4.6361 8.0293C4.52214 7.97415 4.42015 7.89711 4.33596 7.80255C4.25177 7.70799 4.18703 7.59778 4.14544 7.4782C4.10384 7.35862 4.0862 7.23202 4.09353 7.10563C4.10086 6.97924 4.13302 6.85553 4.18816 6.74156C4.2433 6.62759 4.32035 6.5256 4.41491 6.44141C4.50946 6.35722 4.61968 6.29248 4.73925 6.25088L4.97833 6.16826C4.59698 4.79402 4.3564 3.38455 4.26029 1.96162L2.19016 2.03296C2.37879 5.04215 3.16531 7.98357 4.50377 10.6853C7.6029 16.7841 13.2186 20.2496 21.2055 20.9954L21.2719 19.2024C19.8477 19.0677 18.4383 18.8067 17.0603 18.4224L17.019 18.6375C16.9705 18.8886 16.8242 19.1101 16.6124 19.2533C16.4006 19.3965 16.1405 19.4498 15.8895 19.4013C15.6384 19.3528 15.4169 19.2065 15.2737 18.9947C15.1304 18.7828 15.0772 18.5228 15.1257 18.2717L15.3719 16.9979C15.3981 16.8624 15.4531 16.7342 15.533 16.6218C15.613 16.5094 15.7162 16.4155 15.8356 16.3464C15.955 16.2774 16.0879 16.2347 16.2251 16.2214C16.3624 16.208 16.501 16.2243 16.6315 16.2691C18.4756 16.8813 20.3928 17.2464 22.3329 17.3548C22.5833 17.3711 22.8175 17.4845 22.9857 17.6708C23.1539 17.8571 23.2428 18.1016 23.2335 18.3524L23.0958 22.0707C23.0866 22.3199 22.9812 22.5558 22.8018 22.7289C22.6223 22.9021 22.3828 22.9989 22.1334 22.9992Z" fill="#001647"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_117_72">
-                <rect width="23" height="23" fill="white" transform="translate(0.571411)"/>
-                </clipPath>
-                </defs>
-                </svg>
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <div class="toggle-button-wrapper">
-          <button class="toggle-button">
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-
-          </button>
-        </div>
-        </div>
-    </header>
-    <div class="custom-container">
-      <section class="banner-section">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-lg-7 animate__animated animate__backInLeft">
-                <h1 class="mb-xl-4 mb-3">Distinctly Designed. Brilliantly Built.</h1>
-                <h5 class="mb-xl-5 mb-4">Helping you deliver custom & scalable mobile experiences with the potential to change the world.</h5>
-                <button class="custom-primary-btn"><span>Schedule a Consultation</span></button>
-              </div>
-              <div class="col-lg-5">
-                <img src="./Images/banner-img.png" alt="Banner Image">
-              </div>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Scratch Project</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+         />
+         <link rel="stylesheet" type="text/css" href="./Css/slick.min.css"/>
+      <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+   </head>
+   <body>
+      <header class="header" id="header-wrapper">
+         <div class="container flex-center">
+            <svg width="78" height="38" viewBox="0 0 78 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M38.7855 4.86963L55.7272 28.9851L72.1929 0.27832H68.5702L55.6721 22.3434L40.304 0.27832H38.7855H37.2674L21.8993 22.3434L9.00119 0.27832H5.37854L21.8443 28.9851L38.7855 4.86963Z" fill="url(#paint0_linear_117_48)"/>
+               <path d="M73.1804 0.27832L55.7547 30.4785L38.7855 6.20697L21.8167 30.4785L4.39052 0.27832H0L21.5149 37.7218L31.48 23.422L38.7855 12.938L46.0914 23.422L56.0565 37.7218L77.5714 0.27832H73.1804Z" fill="url(#paint1_linear_117_48)"/>
+               <path d="M38.7855 23.2573H31.5948L29.6743 26.0137H38.7855H47.8971L45.9766 23.2573H38.7855Z" fill="url(#paint2_linear_117_48)"/>
+               <defs>
+                  <linearGradient id="paint0_linear_117_48" x1="10.5" y1="5.0894" x2="28.2691" y2="41.4853" gradientUnits="userSpaceOnUse">
+                     <stop stop-color="#26289F"/>
+                     <stop offset="1" stop-color="#2442BA"/>
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_117_48" x1="5.94607" y1="6.55363" x2="30.7338" y2="51.7458" gradientUnits="userSpaceOnUse">
+                     <stop stop-color="#26289F"/>
+                     <stop offset="1" stop-color="#2442BA"/>
+                  </linearGradient>
+                  <linearGradient id="paint2_linear_117_48" x1="31.0711" y1="23.7193" x2="31.7936" y2="27.9228" gradientUnits="userSpaceOnUse">
+                     <stop stop-color="#26289F"/>
+                     <stop offset="1" stop-color="#2442BA"/>
+                  </linearGradient>
+               </defs>
+            </svg>
+            <nav class="nav navigation-links navmenu-mobile">
+               <ul class="flex-center">
+                  <li><a href="#">web-development</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Expertise</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Project</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li>
+                     <button class="custom-btn-round">
+                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g clip-path="url(#clip0_117_72)">
+                              <path d="M22.1334 22.9992C22.1131 22.9992 22.0924 22.9992 22.0718 22.9973C10.5186 22.2566 5.18793 16.3286 2.74983 11.486C1.13512 8.25054 0.275866 4.69079 0.236816 1.07502C0.243678 0.829859 0.343726 0.596536 0.516583 0.422554C0.68944 0.248571 0.922106 0.147012 1.16721 0.138559L5.16094 0.000844402C5.29268 -0.00380692 5.42399 0.0186133 5.54672 0.0667178C5.66946 0.114822 5.78103 0.187587 5.87453 0.280518C5.96803 0.37345 6.04148 0.484577 6.09033 0.607019C6.13918 0.729461 6.1624 0.86062 6.15855 0.992392C6.18598 2.85694 6.49835 4.70633 7.08482 6.47646C7.16326 6.71649 7.14439 6.97771 7.03227 7.20397C6.92014 7.43024 6.72371 7.60346 6.48521 7.68642L5.37275 8.07202C5.25317 8.11362 5.12657 8.13126 5.00018 8.12392C4.87378 8.11659 4.75007 8.08444 4.6361 8.0293C4.52214 7.97415 4.42015 7.89711 4.33596 7.80255C4.25177 7.70799 4.18703 7.59778 4.14544 7.4782C4.10384 7.35862 4.0862 7.23202 4.09353 7.10563C4.10086 6.97924 4.13302 6.85553 4.18816 6.74156C4.2433 6.62759 4.32035 6.5256 4.41491 6.44141C4.50946 6.35722 4.61968 6.29248 4.73925 6.25088L4.97833 6.16826C4.59698 4.79402 4.3564 3.38455 4.26029 1.96162L2.19016 2.03296C2.37879 5.04215 3.16531 7.98357 4.50377 10.6853C7.6029 16.7841 13.2186 20.2496 21.2055 20.9954L21.2719 19.2024C19.8477 19.0677 18.4383 18.8067 17.0603 18.4224L17.019 18.6375C16.9705 18.8886 16.8242 19.1101 16.6124 19.2533C16.4006 19.3965 16.1405 19.4498 15.8895 19.4013C15.6384 19.3528 15.4169 19.2065 15.2737 18.9947C15.1304 18.7828 15.0772 18.5228 15.1257 18.2717L15.3719 16.9979C15.3981 16.8624 15.4531 16.7342 15.533 16.6218C15.613 16.5094 15.7162 16.4155 15.8356 16.3464C15.955 16.2774 16.0879 16.2347 16.2251 16.2214C16.3624 16.208 16.501 16.2243 16.6315 16.2691C18.4756 16.8813 20.3928 17.2464 22.3329 17.3548C22.5833 17.3711 22.8175 17.4845 22.9857 17.6708C23.1539 17.8571 23.2428 18.1016 23.2335 18.3524L23.0958 22.0707C23.0866 22.3199 22.9812 22.5558 22.8018 22.7289C22.6223 22.9021 22.3828 22.9989 22.1334 22.9992Z" fill="#001647"/>
+                           </g>
+                           <defs>
+                              <clipPath id="clip0_117_72">
+                                 <rect width="23" height="23" fill="white" transform="translate(0.571411)"/>
+                              </clipPath>
+                           </defs>
+                        </svg>
+                     </button>
+                  </li>
+               </ul>
+            </nav>
+            <div class="toggle-button-wrapper">
+               <button class="toggle-button">
+               <span class="menu-line"></span>
+               <span class="menu-line"></span>
+               <span class="menu-line"></span>
+               <span class="menu-line"></span>
+               <span class="menu-line"></span>
+               <span class="menu-line"></span>
+               </button>
             </div>
-          </div>
-      </section>
-      <section class="growth-section" style="background-image: url(./Images/growth-bg-left.svg), url(./Images/growth-bg-right.svg);">
-          <div class="medium-container">
-            <div class="row align-items-center g-4">
-              <div class="col-xl-4 animate__animated animate__backInLeft">
-                <p class="text-small font-semibold mb-1">Oure Servies</p>
-                <h3 class="font-semibold mb-3">Create Growth for your Business</h3>
-                <p class="text-small text-black mb-xl-5 mb-4">We will empower your business via optimal solution</p>
-                <button class="custom-primary-btn"><span>Get Start Now</span></button>
-              </div>
-              <div class="col-xl-8 animate__animated animate__backInRight">
-                <div class="row">
-                  <div class="col-sm-6 mb-sm-5 mb-3">
-                    <div class="blue-box-wrapper mb-2">
-                          <img src="./Images/consult.svg" alt="Consult Icon">
-                    </div>
-                    <p class="font-semibold mb-3">Consulting</p>
-                    <p class="text-small text-black ">Remove the guesswork. Consult with our Business Experts. </p>
+         </div>
+      </header>
+      <div class="custom-container">
+         <section class="banner-section">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-lg-7 animate__animated animate__backInLeft">
+                     <h1 class="mb-xl-4 mb-3">Distinctly Designed. Brilliantly Built.</h1>
+                     <h5 class="mb-xl-5 mb-4">Helping you deliver custom & scalable mobile experiences with the potential to change the world.</h5>
+                     <button class="custom-primary-btn"><span>Schedule a Consultation</span></button>
                   </div>
-                  <div class="col-sm-6 mb-sm-5 mb-3">
-                    <div class="blue-box-wrapper mb-2">
-                          <img src="./Images/implementation.svg" alt="Implementation Icon">
-                    </div>
-                    <p class="font-semibold mb-3">Implementation</p>
-                    <p class="text-small text-black ">We deliver end-to-end business solutions across all domains. </p>
+                  <div class="col-lg-5">
+                     <img src="./Images/banner-img.png" alt="Banner Image">
                   </div>
-                  <div class="col-sm-6  mb-sm-5 mb-3">
-                    <div class="blue-box-wrapper mb-2">
-                          <img src="./Images/managed-services.svg" alt="Managed Services Icon">
-                    </div>
-                    <p class="font-semibold mb-3">Managed Services</p>
-                    <p class="text-small text-black ">24/7 Managed Services support for secure digital investments.</p>
+               </div>
+            </div>
+         </section>
+         <section class="growth-section pb-5" style="background-image: url(./Images/growth-bg-left.svg), url(./Images/growth-bg-right.svg);">
+            <div class="medium-container">
+               <div class="row align-items-center g-4">
+                  <div class="col-xl-4 animate__animated animate__backInLeft">
+                     <p class="text-small font-semibold mb-1">Oure Servies</p>
+                     <h3 class="font-semibold mb-3">Create Growth for your Business</h3>
+                     <p class="text-small text-black mb-xl-5 mb-4">We will empower your business via optimal solution</p>
+                     <button class="custom-primary-btn"><span>Get Start Now</span></button>
                   </div>
-                  <div class="col-sm-6  mb-sm-5 mb-3">
-                    <div class="blue-box-wrapper mb-2">
-                          <img src="./Images/bpo.svg" alt="Bpo Icon">
-                    </div>
-                    <p class="font-semibold mb-3">BPO</p>
-                    <p class="text-small text-black ">Enhance your workforce with our expert BPO teams.</p>
+                  <div class="col-xl-8 animate__animated animate__backInRight">
+                     <div class="row">
+                        <div class="col-sm-6 mb-sm-5 mb-3">
+                           <div class="blue-box-wrapper mb-2">
+                              <img src="./Images/consult.svg" alt="Consult Icon">
+                           </div>
+                           <p class="font-semibold mb-3">Consulting</p>
+                           <p class="text-small text-black ">Remove the guesswork. Consult with our Business Experts. </p>
+                        </div>
+                        <div class="col-sm-6 mb-sm-5 mb-3">
+                           <div class="blue-box-wrapper mb-2">
+                              <img src="./Images/implementation.svg" alt="Implementation Icon">
+                           </div>
+                           <p class="font-semibold mb-3">Implementation</p>
+                           <p class="text-small text-black ">We deliver end-to-end business solutions across all domains. </p>
+                        </div>
+                        <div class="col-sm-6  mb-sm-5 mb-3">
+                           <div class="blue-box-wrapper mb-2">
+                              <img src="./Images/managed-services.svg" alt="Managed Services Icon">
+                           </div>
+                           <p class="font-semibold mb-3">Managed Services</p>
+                           <p class="text-small text-black ">24/7 Managed Services support for secure digital investments.</p>
+                        </div>
+                        <div class="col-sm-6  mb-sm-5 mb-3">
+                           <div class="blue-box-wrapper mb-2">
+                              <img src="./Images/bpo.svg" alt="Bpo Icon">
+                           </div>
+                           <p class="font-semibold mb-3">BPO</p>
+                           <p class="text-small text-black ">Enhance your workforce with our expert BPO teams.</p>
+                        </div>
+                     </div>
                   </div>
+               </div>
+            </div>
+            <div class="container text-center">
+               <h2 class="font-500 animate__animated animate__backInLeft"> Web and Mobile App Design & Development to <a href="" class="custom-link-green">Creating your digital footprint around the world</a>, We help brands and businesses increase visibility, engagement, and revenue.</h2>
+            </div>
+         </section>
+         <section class="department-and-skills-wrapper">
+            <div class="custom-flex-wrapper-start align-items-start">
+               <div class="skills-wrapper-left" style="background-image: url(./Images/skills.svg), linear-gradient(131.35deg, #26289F 11.92%, #2442BA 85.42%)">
+                  <div class="inner-content text-white ms-auto">
+                     <h3 class="font-weight-600 text-white pb-3">Departments and Skills</h3>
+                     <span class="text-extra-small">A ultimate partner for future proof digital transformation</span>
+                     <ul class="nav nav-pills custom-tabs-links  custom-flex-col mt-4" id="pills-tab" role="tablist">
+                        <li class="nav-item mb-2" role="presentation">
+                           <button class="nav-link active" id="pills-web-development-tab" data-bs-toggle="pill" data-bs-target="#pills-web-development" type="button" role="tab" aria-controls="pills-web-development" aria-selected="true">Web Development</button>
+                        </li>
+                        <li class="nav-item mb-2" role="presentation">
+                           <button class="nav-link" id="pills-cloud-servies-tab" data-bs-toggle="pill" data-bs-target="#pills-cloud-servies" type="button" role="tab" aria-controls="pills-cloud-servies" aria-selected="false">Cloud Services</button>
+                        </li>
+                        <li class="nav-item mb-2" role="presentation">
+                           <button class="nav-link" id="pills-data-science-tab" data-bs-toggle="pill" data-bs-target="#pills-data-science" type="button" role="tab" aria-controls="pills-data-science" aria-selected="false">Data Science</button>
+                        </li>
+                        <li class="nav-item mb-2" role="presentation">
+                           <button class="nav-link" id="pills-big-data-tab" data-bs-toggle="pill" data-bs-target="#pills-big-data" type="button" role="tab" aria-controls="pills-big-data" aria-selected="false">Big Data</button>
+                        </li>
+                        <li class="nav-item mb-2" role="presentation">
+                           <button class="nav-link" id="pills-mobile-dev-tab" data-bs-toggle="pill" data-bs-target="#pills-mobile-dev" type="button" role="tab" aria-controls="pills-mobile-dev" aria-selected="false">Mobile Development</button>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="skills-wrapper-right">
+                  <div class="tab-content custom-tabs-content" id="pills-tabContent">
+                     <div class="tab-pane fade show active" id="pills-web-development" role="tabpanel" aria-labelledby="pills-web-development-tab">
+                        <div class="row">
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/react-icon.svg" class="mb-2" alt="React Icon">
+                              <span class="text-extra-small font-weight-600">React.js</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/java-icon.svg" class="mb-2" alt="Java Icon">
+                              <span class="text-extra-small font-weight-600">Java</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/php-icon.svg" class="mb-2" alt="Php Icon">
+                              <span class="text-extra-small font-weight-600">Php</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/css-icon.svg" class="mb-2" alt="Css Icon">
+                              <span class="text-extra-small font-weight-600">Css</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/html-icon.svg" class="mb-2" alt="html Icon">
+                              <span class="text-extra-small font-weight-600">Html</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/javascipt-icon.svg" class="mb-2" alt="Javascript Icon">
+                              <span class="text-extra-small font-weight-600">Javascript</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/django-icon.svg" class="mb-2" alt="Django Icon">
+                              <span class="text-extra-small font-weight-600">Django Rest</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/python-icon.svg" class="mb-2" alt="Python Icon">
+                              <span class="text-extra-small font-weight-600">Python</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/flask-icon.svg" class="mb-2" alt="flask Icon">
+                              <span class="text-extra-small font-weight-600">Flask</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/postgres-icon.svg" class="mb-2" alt="Postgress Icon">
+                              <span class="text-extra-small font-weight-600">PostgreSQL</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/mongo-icon.svg" class="mb-2" alt="MongoDb Icon">
+                              <span class="text-extra-small font-weight-600">MongoDB</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/react-native-icon.svg" class="mb-2" alt="React Native Icon">
+                              <span class="text-extra-small font-weight-600">React Native</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="pills-cloud-servies" role="tabpanel" aria-labelledby="pills-cloud-servies-tab">
+                        <div class="row">
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/aws-icon.svg" class="mb-2" alt="Aws Icon">
+                              <span class="text-extra-small font-weight-600">AWS</span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/azure-icon.svg" class="mb-2" alt="Azure Icon">
+                              <span class="text-extra-small font-weight-600">AZURE </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/gcp-icon.svg" class="mb-2" alt="GCP Icon">
+                              <span class="text-extra-small font-weight-600">GCP</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="pills-data-science" role="tabpanel" aria-labelledby="pills-data-science-tab">
+                        <div class="row">
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/tensor-flow-icon.svg" class="mb-2" alt="Aws Icon">
+                              <span class="text-extra-small font-weight-600">Tensorflow
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/pytorch-icon.svg" class="mb-2" alt="Azure Icon">
+                              <span class="text-extra-small font-weight-600">Pytorch </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/scikit-icon.svg" class="mb-2" alt="GCP Icon">
+                              <span class="text-extra-small font-weight-600">Scikit-learn
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/stats-model-icon.svg" class="mb-2" alt="Aws Icon">
+                              <span class="text-extra-small font-weight-600">StatsModel
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/numpy-icon.svg" class="mb-2" alt="Azure Icon">
+                              <span class="text-extra-small font-weight-600">Numpy
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/pandas-icon.svg" class="mb-2" alt="GCP Icon">
+                              <span class="text-extra-small font-weight-600">Pandas
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/matplot-icon.svg" class="mb-2" alt="Aws Icon">
+                              <span class="text-extra-small font-weight-600">Matplotlib
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/computer-vision-icon.svg" class="mb-2" alt="Azure Icon">
+                              <span class="text-extra-small font-weight-600">Computer Vision
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/npl-icon.svg" class="mb-2" alt="GCP Icon">
+                              <span class="text-extra-small font-weight-600">PostgreSQL
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/forcast-icon.svg" class="mb-2" alt="GCP Icon">
+                              <span class="text-extra-small font-weight-600">Forecasting </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="pills-big-data" role="tabpanel" aria-labelledby="pills-big-data-tab">
+                        <div class="row">
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/kafka-icon.svg" class="mb-2" alt="Aws Icon">
+                              <span class="text-extra-small font-weight-600">Kafka
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/airflow-icon.svg" class="mb-2" alt="Azure Icon">
+                              <span class="text-extra-small font-weight-600">Airflow
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/hevodata-icon.svg" class="mb-2" alt="GCP Icon">
+                              <span class="text-extra-small font-weight-600">Hevodata
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/fivetran-icon.svg" class="mb-2" alt="Aws Icon">
+                              <span class="text-extra-small font-weight-600">Fivetran
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/azure-datafactory-icon.svg" class="mb-2" alt="Azure Icon">
+                              <span class="text-extra-small font-weight-600">Azure Datafactory
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/redshift-icon.svg" class="mb-2" alt="Aws Icon">
+                              <span class="text-extra-small font-weight-600">AWS Redshift
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/snow-flake-icon.svg" class="mb-2" alt="Azure Icon">
+                              <span class="text-extra-small font-weight-600">Snowflake
+                              </span>
+                           </div>
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/databricks-icon.svg" class="mb-2" alt="GCP Icon">
+                              <span class="text-extra-small font-weight-600">Azure Databricks
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="pills-mobile-dev" role="tabpanel" aria-labelledby="pills-mobile-dev-tab">
+                        <div class="row">
+                           <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
+                              <img src="./Images/react-native-icon.svg" class="mb-2" alt="React Native Icon">
+                              <span class="text-extra-small font-weight-600">React Native</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="recent-projects">
+            <div class="header-content text-center">
+               <div class="container">
+                  <p class="text-small text-black-full">Recent Project</p>
+                  <h3 class="font-weight-600">Work on big ideas,without<span class="primary-clr"> the busywork</span></h3>
+               </div>
+            </div>
+            <div class="slider-container">
+               <div class="works-slider">
+                  <div class="custom-card-wrapper">
+                     <img src="./Images/aficash.svg" alt="Afi cash Image">
+                     <div class="custom-flex-between my-3">
+                        <h5 class="font-weight-600">AfiCash</h5>
+                        <div class="tag-wrapper text-extra-small font-bold cutom-blue-wrapper"><span>Mobile app</span></div>
+                     </div>
+                  </div>
+                  <div class="custom-card-wrapper">
+                     <img src="./Images/roq.svg" alt="Afi cash Image">
+                     <div class="custom-flex-between my-3">
+                        <h5 class="font-weight-600">ROQ</h5>
+                        <div class="tag-wrapper text-extra-small font-bold cutom-blue-wrapper"><span>SAAS Application</span></div>
+                     </div>
+                  </div>
+                  <div class="custom-card-wrapper">
+                     <img src="./Images/ai.svg" alt="Afi cash Image">
+                     <div class="custom-flex-between my-3">
+                        <h5 class="font-weight-600">Incarnate AI</h5>
+                        <div class="tag-wrapper text-extra-small font-bold cutom-blue-wrapper"><span>Mobile app</span></div>
+                     </div>
+                  </div>
+                  <div class="custom-card-wrapper">
+                     <img src="./Images/aficash.svg" alt="Afi cash Image">
+                     <div class="custom-flex-between my-3">
+                        <h5 class="font-weight-600">AfiCash</h5>
+                        <div class="tag-wrapper text-extra-small font-bold cutom-blue-wrapper"><span>Mobile app</span></div>
+                     </div>
+                  </div>
+                  <div class="custom-card-wrapper">
+                     <img src="./Images/infinite-careers.svg" alt="Afi cash Image">
+                     <div class="custom-flex-between my-3">
+                        <h5 class="font-weight-600">Infinity Careers</h5>
+                        <div class="tag-wrapper text-extra-small font-bold cutom-blue-wrapper"><span>Mobile app</span></div>
+                     </div>
+                  </div>
+              
                 </div>
-              </div>
             </div>
-        </div>
-      </section>
-    </div>
-  <script src="./Js/jquery.min.js" ></script>
-  <script src="./Bootstrap/js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+         </section>
+         <section class="recent-projects testimonials-wrapper">
+            <div class="header-content text-center">
+               <div class="container">
+                  <p class="text-small text-black-full">Testimonials</p>
+                  <h3 class="font-weight-600">What <span class="primary-clr"> clients love</span> in working
+                     with The Software House</h3>
+               </div>
+            </div>
+            <div class="testimonials-slider">
+               <div class="white-card-wrapper text-center">
+                  <div class="testimonials-slider-inner-wrapper">
+                     <p class="text-small font-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit aliquam euismod id id blandit scelerisque est. Morbi cursus integer et urna. Feugiat donec eu quis ut ornare. Blandit aliquam euismod id id blandit scelerisque est</p>
+                     <span class="font-bold text-extra-small grey-text d-block">JAMES GUERBY</span>
+                     <span class="font-weight-600 text-extra-small grey-text d-block">OverIP</span>
+                     <div class="user-icon-wrapper">
+                        <img src="./Images/user-icon.svg" alt="User Image">
+                     </div>
+                  </div>
+               </div>
+               <div class="white-card-wrapper text-center">
+                  <div class="testimonials-slider-inner-wrapper">
+                     <p class="text-small font-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit aliquam euismod id id blandit scelerisque est. Morbi cursus integer et urna. Feugiat donec eu quis ut ornare. Blandit aliquam euismod id id blandit scelerisque est</p>
+                     <span class="font-bold text-extra-small grey-text d-block">STEPHEN ILLET</span>
+                     <span class="font-weight-600 text-extra-small grey-text d-block">IT Solutions</span>
+                     <div class="user-icon-wrapper">
+                        <img src="./Images/user-icon.svg" alt="User Image">
+                     </div>
+                  </div>
+               </div>
+               <div class="white-card-wrapper text-center">
+                  <div class="testimonials-slider-inner-wrapper">
+                     <p class="text-small font-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit aliquam euismod id id blandit scelerisque est. Morbi cursus integer et urna. Feugiat donec eu quis ut ornare. Blandit aliquam euismod id id blandit scelerisque est</p>
+                     <span class="font-bold text-extra-small grey-text d-block">STEPHEN ILLET</span>
+                     <span class="font-weight-600 text-extra-small grey-text d-block">IT Solutions</span>
+                     <div class="user-icon-wrapper">
+                        <img src="./Images/user-icon.svg" alt="User Image">
+                     </div>
+                  </div>
+               </div>
+               <div class="white-card-wrapper text-center">
+                  <div class="testimonials-slider-inner-wrapper">
+                     <p class="text-small font-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit aliquam euismod id id blandit scelerisque est. Morbi cursus integer et urna. Feugiat donec eu quis ut ornare. Blandit aliquam euismod id id blandit scelerisque est</p>
+                     <span class="font-bold text-extra-small grey-text d-block">DONALD JACK</span>
+                     <span class="font-weight-600 text-extra-small grey-text d-block">Avicenna</span>
+                     <div class="user-icon-wrapper">
+                        <img src="./Images/user-icon.svg" alt="User Image">
+                     </div>
+                  </div>
+               </div>
+               <div class="white-card-wrapper text-center">
+                  <div class="testimonials-slider-inner-wrapper">
+                     <p class="text-small font-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit aliquam euismod id id blandit scelerisque est. Morbi cursus integer et urna. Feugiat donec eu quis ut ornare. Blandit aliquam euismod id id blandit scelerisque est</p>
+                     <span class="font-bold text-extra-small grey-text d-block">STEPHEN ILLET</span>
+                     <span class="font-weight-600 text-extra-small grey-text d-block">IT Solutions</span>
+                     <div class="user-icon-wrapper">
+                        <img src="./Images/user-icon.svg" alt="User Image">
+                     </div>
+                  </div>
+               </div>
+               
+
+            </div>
+         </section>
+      </div>
+      <script src="./Js/jquery.min.js" ></script>
+      <script src="./Bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="./Js/slick.min.js"></script>
+      <script src="js/script.js"></script>
+   </body>
 </html>
