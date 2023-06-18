@@ -15,6 +15,9 @@
       @include spacing-same(50px);
    }
 }
+.font-500{
+   @include font-weight(500);
+}
 .font-semibold{
    @include font-weight(600);
 }
@@ -33,4 +36,29 @@
    @include height(44px);
    @include spacing-same(8px);
    }
+   img{
+      @include max-width(100%);
+   }
+}
+.custom-container-small{
+   @include max-width(1070px);
+   @include margin-all-diff(0,auto,0,auto);
+}
+.custom-flex-wrapper-center{
+   @include center-element;
+}
+.custom-flex-wrapper-start{
+   @include center-element;
+   @include justify-content(flex-start);
+}
+.custom-flex-wrapper-center{
+   @include center-element;
+   @include justify-content(center);
+   @include flex-direction(column);
+}
+.text-white{
+   @include color($white-clr);
+}
+.font-weight-600{
+   @include font-weight(600);
 }

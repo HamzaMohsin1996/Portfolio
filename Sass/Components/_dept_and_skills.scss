@@ -1,0 +1,17 @@
+.department-and-skills-wrapper{
+    @include grey-gradient;
+    .skills-wrapper-left{
+        // @include background($gradient-clr);
+        @include spacing-same(40px);
+        @include max-width(580px);
+        @include width(100%);
+        @include min-height(580px);
+        .inner-content{
+            @include max-width(290px);
+        }
+    }
+    .skills-wrapper-right{
+        @include spacing-same(40px);
+        @include width(100%);
+    }
+}

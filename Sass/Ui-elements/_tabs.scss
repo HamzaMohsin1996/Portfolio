@@ -1,0 +1,19 @@
+.custom-tabs-links{
+    @include flex-col;
+    li{
+        .nav-link{
+            @include color($white-clr);
+            @include font-size(16px);
+            @include font-weight(600);
+            &:hover{
+                @include color($white-clr);
+            }
+            &.active{
+                @include background-color($primry-clr);
+            }
+        }
+    }
+}
+.custom-tabs-content{
+
+}

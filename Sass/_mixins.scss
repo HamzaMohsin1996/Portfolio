@@ -30,8 +30,21 @@
 @mixin flex-flow{
   flex-flow: column wrap;
 }
+@mixin flex-direction($val){
+  flex-direction: $val;
+}
+
+@mixin justify-content($val){
+  justify-content: $val;  
+}
 @mixin display($display){
   display: $display;
+}
+@mixin flex-col{
+  @include center-element;
+  @include items-start;
+  @include flex-direction(column);
+  @include justify-content(flex-start);
 }
   // Mixin for creating a gradient background
   @mixin gradient-background($start-color, $end-color) {
@@ -220,6 +233,9 @@
 }
 @mixin max-width($value){
   max-width: $value;
+}
+@mixin min-height($value){
+  min-height: $value;
 }
 @mixin top($value){
   top: $value;
