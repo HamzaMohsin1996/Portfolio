@@ -68,3 +68,21 @@
 .primary-clr{
    @include color($primry-clr);
 }
+.font-bold{
+   @include font-weight(700);
+}
+.custom-flex-between{
+   @include center-element;
+   @include justify-content(space-between);
+}
+.cutom-blue-wrapper{
+   @include spacing-both-side(6px,16px);
+   @include border(1px,solid,$secondary-clr );
+   @include border-radius(4px);
+   span{
+      @include gradient-color-text;
+   }
+}
+.grey-text{
+   @include color($light-purple-clr);
+}

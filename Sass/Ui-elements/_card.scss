@@ -1,0 +1,24 @@
+.custom-card-wrapper{
+    @include grey-gradient;
+    @include spacing-same(10px);
+    @include border-radius(4px);
+}
+.white-card-wrapper{
+    @include background-color($white-clr);
+    @include border-radius(4px);
+    @include spacing-same(40px);
+    @include position(relative);
+    @include grey-shadow;
+    .user-icon-wrapper{
+        @include width(74px);
+        @include height(74px);
+        @include border(2px,solid,$primry-clr);
+        @include border-radius(50%);
+        @include position-custom(absolute,unset,unset,-25px,-20px);
+        
+
+        img{
+            @include max-width(100%);
+        }
+    }
+}

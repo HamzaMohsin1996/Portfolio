@@ -1,0 +1,64 @@
+.slider-container{
+    @include spacing-top(60px);
+    @include breakpoint(large-desktop){
+        @include spacing-top(40px);
+    }
+    .works-slider{
+        .slick-slide{
+            @include margin-left(20px);
+            @include margin-right(20px);
+            img{
+                @include height(300px);
+                @include width(100%);
+                object-fit: cover;
+                @include breakpoint(large-desktop){
+                    @include height(250px);   
+                }
+            }
+        }
+        .slick-arrow{
+            @include display-none ;
+        }
+    }
+    
+}
+.testimonials-slider{
+    @include spacing-top(60px);
+    @include breakpoint(large-desktop){
+        @include spacing-top(40px);
+    }
+    .slick-slide{
+        @include margin-left(20px);
+        @include margin-right(20px);
+        @include margin-bottom(50px);
+        .testimonials-slider-inner-wrapper{
+            p{
+                @include margin-bottom(10px);
+            }
+        }
+    }
+    .slick-arrow{
+        @include display-none ;
+    }
+}
+.slick-dots{
+    @include center-element;
+    @include list-none;
+    li{
+        @include margin-left(5px);
+        @include margin-right(5px);
+        
+        button{
+            @include width(13px);
+            @include height(13px);
+            @include background-color($light-purple-clr);
+            @include border-radius(50%);
+            @include font-size(0);
+        }
+        &.slick-active{
+            button{
+                @include background-color($primry-clr);
+            }
+        }
+    }
+}

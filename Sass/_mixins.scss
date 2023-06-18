@@ -198,7 +198,7 @@
 
 
 @mixin display-none{
-  display: none;
+  display: none !important;
 }
 @mixin border-radius-different($top,$bottom,$top-right,$bottom-right){
   border-radius: $top $top-right $bottom  $bottom-right;
@@ -244,4 +244,14 @@
   background-position: left top, right top;
   background-repeat: no-repeat, no-repeat;
   background-size: 311px 263px;
+}
+@mixin grey-shadow{
+  box-shadow: 0px 10px 50px rgba(143, 154, 182, 0.25);
+}
+@mixin position-custom($position,$top,$left,$bottom,$right){
+  position: $position;
+  top:$top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
 }
