@@ -177,6 +177,19 @@ p {
   color: #8B849B;
 }
 
+.max-width-500 {
+  max-width: 500px;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  top: unset;
+  left: unset;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1001;
+}
+
 /* Header styles */
 .header {
   display: flex;
@@ -233,7 +246,7 @@ p {
     height: 100%;
     padding: 20px 40px;
     margin: 0;
-    display: none !important;
+    display: none;
   }
 }
 .header .nav ul {
@@ -267,12 +280,29 @@ p {
   color: #001647;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 0 25px;
+  margin: 0 25px 0;
+  padding-bottom: 5px;
   font-weight: 500;
   transition: 0.3 ease;
+  position: relative;
+}
+.header .nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: unset;
+  bottom: 0;
+  right: unset;
+  width: 23px;
+  height: 2px;
+  background-color: #19E58C;
+  display: none;
 }
 .header .nav ul li a:hover {
-  color: #2536ad;
+  color: #19E58C;
+}
+.header .nav ul li a:hover::before {
+  display: inline-block;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .header .nav ul li a {
@@ -320,6 +350,9 @@ p {
   border: 1px solid transparent;
   transition: 0.3s ease;
 }
+.custom-btn-round img {
+  max-width: 100%;
+}
 .custom-btn-round:hover {
   background-color: transparent;
   border: 1px solid #2536ad;
@@ -339,7 +372,7 @@ p {
   align-items: center;
   justify-content: center;
   flex-flow: column wrap;
-  display: none !important;
+  display: none;
 }
 @media (max-width: 767px) {
   .toggle-button-wrapper .toggle-button {
@@ -389,6 +422,10 @@ p {
 
 .custom-link-green {
   color: #19E58C;
+}
+
+.arrow-top-btn {
+  background: linear-gradient(131.35deg, #26289F 11.92%, #2442BA 85.42%);
 }
 
 .banner-section {
@@ -503,7 +540,7 @@ p {
   }
 }
 .slider-container .works-slider .slick-arrow {
-  display: none !important;
+  display: none;
 }
 
 .testimonials-slider {
@@ -521,9 +558,6 @@ p {
 }
 .testimonials-slider .slick-slide .testimonials-slider-inner-wrapper p {
   margin-bottom: 10px;
-}
-.testimonials-slider .slick-arrow {
-  display: none !important;
 }
 
 .slick-dots {
@@ -547,6 +581,10 @@ p {
   background-color: #19E58C;
 }
 
+.slick-arrow {
+  display: none !important;
+}
+
 .custom-card-wrapper {
   background: linear-gradient(293.86deg, rgba(235, 235, 235, 0.16) -0.99%, rgba(245, 245, 245, 0.71) 98.77%);
   padding: 10px;
@@ -568,9 +606,97 @@ p {
   position: absolute;
   top: unset;
   left: unset;
-  right: -20px;
+  right: 20px;
   bottom: -25px;
 }
 .white-card-wrapper .user-icon-wrapper img {
   max-width: 100%;
+}
+
+.contact-form-section {
+  background-color: #FFFFFF;
+  padding-top: 120px;
+  padding-left: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1600px) {
+  .contact-form-section {
+    padding-top: 80px;
+    padding-left: 80px;
+  }
+}
+.contact-form-section .contact-form-left-section {
+  padding-right: 70px;
+}
+.contact-form-section .contact-form-right-section {
+  padding: 80px;
+  background: linear-gradient(293.86deg, rgba(235, 235, 235, 0.16) -0.99%, rgba(245, 245, 245, 0.71) 98.77%);
+  width: 100%;
+}
+
+.custom-select {
+  box-shadow: none !important;
+  padding: 15px 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #8B849B;
+  border: 1px solid #D5D4DC;
+  border-radius: 8px;
+  outline: none;
+}
+.custom-select:focus {
+  border: 1px solid #D5D4DC;
+}
+
+.custom-input-wrapper {
+  border: 1px solid #D5D4DC;
+  border-radius: 8px;
+}
+.custom-input-wrapper .input-group-text {
+  background-color: #FFFFFF;
+  padding: 15px 12px;
+  border: 1px solid transparent;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding-right: 0;
+}
+.custom-input-wrapper input {
+  font-size: 16px;
+  font-weight: 500;
+  color: #8B849B;
+  padding: 15px 12px;
+  border: 1px solid transparent;
+  outline: none;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+.custom-input-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.custom-input-wrapper input::placeholer {
+  font-size: 16px;
+  font-weight: 500;
+  color: #8B849B;
+}
+
+.custom-text-area textarea {
+  font-size: 16px;
+  font-weight: 500;
+  color: #8B849B;
+  border: 1px solid #D5D4DC;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+  box-shadow: none !important;
+}
+.custom-text-area textarea:focus {
+  border: 1px solid #D5D4DC;
+}
+.custom-text-area textarea::placeholer {
+  font-size: 16px;
+  font-weight: 500;
+  color: #8B849B;
 }/*# sourceMappingURL=styles.css.map */

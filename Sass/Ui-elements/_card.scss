@@ -14,7 +14,7 @@
         @include height(74px);
         @include border(2px,solid,$primry-clr);
         @include border-radius(50%);
-        @include position-custom(absolute,unset,unset,-25px,-20px);
+        @include position-custom(absolute,unset,unset,-25px,20px);
         
 
         img{

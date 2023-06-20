@@ -1,0 +1,18 @@
+.contact-form-section{
+    @include background-color($white-clr);
+    @include spacing-top(120px);
+    @include spacing-left(120px);
+    @include center-element;
+    @include breakpoint(large-desktop){
+        @include spacing-top(80px);
+        @include spacing-left(80px);  
+    }
+    .contact-form-left-section{
+            @include spacing-right(70px);
+    }
+    .contact-form-right-section{
+        @include spacing-same(80px);
+        @include grey-gradient;
+        @include width(100%);
+    }
+}

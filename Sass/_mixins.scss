@@ -71,7 +71,7 @@
     padding-left: $left;
   }
   @mixin spacing-right($right) {
-    padding-left: $right;
+    padding-right: $right;
   }
   @mixin spacing-top($top) {
     padding-top: $top;
@@ -198,7 +198,7 @@
 
 
 @mixin display-none{
-  display: none !important;
+  display: none;
 }
 @mixin border-radius-different($top,$bottom,$top-right,$bottom-right){
   border-radius: $top $top-right $bottom  $bottom-right;
@@ -254,4 +254,36 @@
   left: $left;
   right: $right;
   bottom: $bottom;
+}
+@mixin display-none-important{
+  display: none !important;
+}
+@mixin no-box-shadow{
+  box-shadow: none !important;
+}
+@mixin border-top-left-radius($border-radius){
+  border-top-left-radius:$border-radius;
+}
+@mixin border-bottom-left-radius($border-radius){
+  border-bottom-left-radius: $border-radius;
+}
+@mixin outline-none{
+  outline: none;
+}
+@mixin border-color($color){
+  border-color: $color !important;
+}
+@mixin blue-gradient{
+  background: $gradient-clr;
+}
+@mixin position-content($position,$left,$right,$top,$bottom,$width,$height,$background-clr){
+  content: '';
+  position: $position;
+  left: $left;
+  top: $top;
+  bottom:$bottom;
+  right: $right;
+  width: $width;
+  height: $height;
+  background-color: $background-clr;
 }

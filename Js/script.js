@@ -1,4 +1,21 @@
 $(document).ready(function(){
+   // Show or hide the scroll top button based on scroll position
+   $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#scrolltop').fadeIn();
+    } else {
+      $('#scrolltop').fadeOut();
+    }
+  });
+
+  // Scroll to top and hide button when clicked
+  $('#scrolltop').click(function() {
+    $('html, body').animate({ scrollTop: 0 }, 800, function() {
+      $('#scrolltop').fadeOut();
+    });
+  });
+
+
   $(".toggle-button").click(function(){
     $(this).toggleClass("active");
     $("#header-wrapper").toggleClass("active");
@@ -30,6 +47,7 @@ $(document).ready(function(){
     ]
   });
 });
+
 window.addEventListener("scroll", function() {
   var header = document.getElementById("header-wrapper");
   var sticky = header.offsetTop;
@@ -38,5 +56,6 @@ window.addEventListener("scroll", function() {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
+
   }
 });
