@@ -276,3 +276,14 @@
 @mixin blue-gradient{
   background: $gradient-clr;
 }
+@mixin position-content($position,$left,$right,$top,$bottom,$width,$height,$background-clr){
+  content: '';
+  position: $position;
+  left: $left;
+  top: $top;
+  bottom:$bottom;
+  right: $right;
+  width: $width;
+  height: $height;
+  background-color: $background-clr;
+}

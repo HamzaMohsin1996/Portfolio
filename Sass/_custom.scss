@@ -90,5 +90,6 @@
    @include max-width(500px);
 }
 .scroll-top-btn{
-  @include position-custom(fixed,unset,unset,20px,20px)
+  @include position-custom(fixed,unset,unset,20px,20px);
+  @include z-index(1001);
 }
