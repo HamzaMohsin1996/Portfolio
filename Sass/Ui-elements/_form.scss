@@ -1,0 +1,66 @@
+.custom-select{
+    @include no-box-shadow;
+    @include spacing-both-side(15px,12px);
+    @include font-size(16px);
+    @include font-weight(500);
+    @include color($light-purple-clr);
+    @include border(1px,solid,$light-grey-clr);
+    @include border-radius(8px);
+    @include outline-none;
+    &:focus{
+        @include border(1px,solid,$light-grey-clr);
+    }
+}
+.custom-input-wrapper{
+ 
+    @include border(1px,solid,$light-grey-clr);
+    @include border-radius(8px);
+    .input-group-text{  
+        @include background-color($white-clr);
+        @include spacing-both-side(15px,12px);
+        @include border-none;
+        @include border-top-left-radius(8px);
+        @include border-bottom-left-radius(8px);
+        @include spacing-right(0);
+    }
+    input{
+        @include font-size(16px);
+        @include font-weight(500);
+        @include color($light-purple-clr);
+        @include spacing-both-side(15px,12px);
+        @include border-none;
+        @include outline-none;
+        @include no-box-shadow;
+        @include border-color(transparent);
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        &::placeholer{
+            @include font-size(16px);
+            @include font-weight(500);
+            @include color($light-purple-clr);
+        }
+    }
+   
+}
+.custom-text-area{
+    textarea{
+        @include font-size(16px);
+        @include font-weight(500);
+        @include color($light-purple-clr);
+        @include border(1px,solid,$light-grey-clr);
+        @include border-radius(8px);
+        resize: none;
+        @include outline-none;
+        @include no-box-shadow;
+        &:focus{
+            @include border(1px,solid,$light-grey-clr);
+        }
+        &::placeholer{
+            @include font-size(16px);
+            @include font-weight(500);
+            @include color($light-purple-clr);
+        }
+    }
+}

@@ -37,9 +37,7 @@
             }
         }
     }
-    .slick-arrow{
-        @include display-none ;
-    }
+    
 }
 .slick-dots{
     @include center-element;
@@ -61,4 +59,7 @@
             }
         }
     }
+}
+.slick-arrow{
+    @include display-none-important ;
 }

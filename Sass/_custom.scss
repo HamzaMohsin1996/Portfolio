@@ -86,3 +86,9 @@
 .grey-text{
    @include color($light-purple-clr);
 }
+.max-width-500{
+   @include max-width(500px);
+}
+.scroll-top-btn{
+  @include position-custom(fixed,unset,unset,20px,20px)
+}

@@ -23,6 +23,9 @@
     @include  spacing-same(8px);
     @include  border-none;
     @include transition (.3s ease);
+    img{
+        @include max-width(100%);
+    }
     &:hover{
         @include background-color(transparent);
         @include border(1px, solid, $border-hover-clr);
@@ -93,4 +96,7 @@
 }
 .custom-link-green{
     @include color($primry-clr);
+}
+.arrow-top-btn{
+  @include blue-gradient;
 }
