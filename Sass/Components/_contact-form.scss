@@ -4,15 +4,46 @@
     @include spacing-left(120px);
     @include center-element;
     @include breakpoint(large-desktop){
-        @include spacing-top(80px);
-        @include spacing-left(80px);  
+        @include spacing-top(60px);
+        @include spacing-left(60px);  
     }
+    @include breakpoint(tablet-sm){
+        @include flex-direction(column);
+        @include spacing-same(40px);
+        @include spacing-bottom(0);
+    }
+    @include breakpoint(mobile){ 
+        @include flex-direction(column);
+        @include spacing-same(40px);
+        @include spacing-bottom(0);
+
+    }
+
     .contact-form-left-section{
             @include spacing-right(70px);
+            @include breakpoint(tablet){
+                @include max-width(400px);
+            }
+            @include breakpoint(tablet-sm){
+                @include max-width(100%);
+                @include spacing-left(0); 
+                @include spacing-bottom(20px); 
+            }
+            @include breakpoint(mobile){
+                @include max-width(400px);
+                @include spacing-bottom(20px); 
+
+            }
     }
     .contact-form-right-section{
         @include spacing-same(80px);
         @include grey-gradient;
         @include width(100%);
+        @include breakpoint(large-desktop){
+            @include spacing-same(60px);
+        }
+        @include breakpoint(mobile){
+            @include spacing-same(20px);
+        }
     }
 }

@@ -7,12 +7,22 @@
         .slick-slide{
             @include margin-left(20px);
             @include margin-right(20px);
+            @include breakpoint(mobile){
+                @include margin-left(10px);
+                @include margin-right(10px);   
+            }
             img{
                 @include height(300px);
                 @include width(100%);
                 object-fit: cover;
                 @include breakpoint(large-desktop){
                     @include height(250px);   
+                }
+                @include breakpoint(tablet){
+                    @include height(200px);    
+                }
+                @include breakpoint(mobile){
+                    @include height(150px);    
                 }
             }
         }
@@ -31,6 +41,11 @@
         @include margin-left(20px);
         @include margin-right(20px);
         @include margin-bottom(50px);
+        @include breakpoint(mobile){
+            @include margin-left(10px);
+            @include margin-right(10px);   
+            @include margin-bottom(20px);
+        }
         .testimonials-slider-inner-wrapper{
             p{
                 @include margin-bottom(10px);

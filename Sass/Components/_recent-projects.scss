@@ -4,6 +4,9 @@
     @include breakpoint(large-desktop){
         @include spacing-both-side(40px,0);
     }
+    @include breakpoint(mobile){
+        @include spacing-both-side(20px,0);
+    }
     .header-content{
         h3{
             @include max-width(470px);

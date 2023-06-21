@@ -28,7 +28,7 @@
         @include position-fixed;
         @include flex-col();
         @include items-start;
-        @include background-color($transparent-layer);
+        @include background-color($white-clr);
         @include width(100%);
         @include height(100%);
         @include spacing-both-side(20px,40px);
@@ -45,6 +45,10 @@
        }
       li {
         @include margin-left(10px);
+        @include breakpoint(tablet){
+          @include margin-left(0);
+          @include margin-bottom(0); 
+         }
         @include breakpoint(mobile){
           @include margin-left(0);
           @include margin-bottom(0); 
@@ -78,10 +82,11 @@
             @include display(inline-block);
             }
          }
-         @include breakpoint(tablet){
-          @include spacing-both-side(0, 5px);
-         }
+          @include breakpoint(tablet){
+            @include margin-top-bottom(0, 10px,0);
+          }
             @include breakpoint(mobile){
+              @include margin-top-bottom(0, 0,0);
               @include spacing-both-side(10px, 0);
               @include flex-only;
             }

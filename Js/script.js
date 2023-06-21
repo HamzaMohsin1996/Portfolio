@@ -27,6 +27,22 @@ $(document).ready(function(){
     autoplaySpeed: 2000,
     margin:5,
     centerMode:true,
+    responsive: [
+      {
+          breakpoint: 1199,
+          settings: {
+              slidesToShow: 2,
+              slidesToScroll:1,
+          }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll:1,
+        }
+    },
+    ]
   });
   $('.testimonials-slider').slick({
     slidesToShow: 3,
@@ -43,7 +59,13 @@ $(document).ready(function(){
               slidesToScroll:1,
           }
       },
-    
+      {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll:1,
+        }
+    },
     ]
   });
   $(function() {

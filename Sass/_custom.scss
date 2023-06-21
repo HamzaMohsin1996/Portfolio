@@ -14,6 +14,14 @@
       @include top(-40px);
       @include spacing-same(50px);
    }
+   @include breakpoint(tablet){
+      @include margin-top-bottom(0,40px,0);
+      @include spacing-same(60px);
+   }
+   @include breakpoint(mobile){
+      @include margin-top-bottom(0,40px,0);
+      @include spacing-same(15px);
+   }
 }
 .font-500{
    @include font-weight(500);

@@ -13,6 +13,18 @@
         @include font-weight(500);
         @include transition(.3 ease);
         @include position(relative);
+        @include breakpoint(tablet-sm){
+            @include spacing-bottom(20px);
+            @include width(32.3%);
+            @include display(inline-block);
+            @include margin-top-bottom(0, 0,0);
+        }
+        @include breakpoint(mobile){
+            @include spacing-bottom(20px);
+            @include width(49%);
+            @include display(inline-block);
+            @include margin-top-bottom(0, 0,0);
+        }
         &::before{
             @include position-content(absolute,0,unset,unset,0,23px,2px,$primry-clr);
             @include display-none;
