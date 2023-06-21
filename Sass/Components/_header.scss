@@ -72,6 +72,12 @@
             @include display(inline-block);
             }
          }
+         &.active{
+          @include color($primry-clr);
+          &::before{
+            @include display(inline-block);
+            }
+         }
          @include breakpoint(tablet){
           @include spacing-both-side(0, 5px);
          }

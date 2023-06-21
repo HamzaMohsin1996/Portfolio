@@ -46,7 +46,46 @@ $(document).ready(function(){
     
     ]
   });
+  $(function() {
+    $(window).on('scroll', function() {
+      var WindowTop = $(window).scrollTop();
+      $('section').each(function(i) {
+        if (
+          WindowTop > $(this).offset().top - 80 &&
+          WindowTop < $(this).offset().top + $(this).outerHeight(true)
+        ) {
+          $('.navigation-item').removeClass('active');
+          $('.navigation-item').eq(i).addClass('active');
+        }
+      });
+    });
+  
+    $('a[href*=\\#]:not([href=\\#])').click(function() {
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('.navigation-item').removeClass('active'); // Remove active class from all navigation items
+          $(this).addClass('active'); // Add active class to the clicked navigation item
+          $('html,body').animate(
+            {
+              scrollTop: target.offset().top
+            },
+            1000
+          );
+          return false;
+        }
+      }
+    });
+  });
+  
+  
+  
 });
+
 
 window.addEventListener("scroll", function() {
   var header = document.getElementById("header-wrapper");
