@@ -46,7 +46,46 @@ $(document).ready(function(){
     
     ]
   });
+  $(function() {
+    $(window).on('scroll', function() {
+      var WindowTop = $(window).scrollTop();
+      $('section').each(function(i) {
+        if (
+          WindowTop > $(this).offset().top - 80 &&
+          WindowTop < $(this).offset().top + $(this).outerHeight(true)
+        ) {
+          $('.navigation-item').removeClass('active');
+          $('.navigation-item').eq(i).addClass('active');
+        }
+      });
+    });
+  
+    $('a[href*=\\#]:not([href=\\#])').click(function() {
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('.navigation-item').removeClass('active'); // Remove active class from all navigation items
+          $(this).addClass('active'); // Add active class to the clicked navigation item
+          $('html,body').animate(
+            {
+              scrollTop: target.offset().top
+            },
+            1000
+          );
+          return false;
+        }
+      }
+    });
+  });
+  
+  
+  
 });
+
 
 window.addEventListener("scroll", function() {
   var header = document.getElementById("header-wrapper");
@@ -59,3 +98,39 @@ window.addEventListener("scroll", function() {
 
   }
 });
+
+// Animation On scroll Style
+ // Function to check if an element is in the viewport
+ function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to handle section scroll animations
+function handleScrollAnimations() {
+  const animatedElements = document.querySelectorAll('.animate__animated');
+
+  animatedElements.forEach((element) => {
+    const animations = element.dataset.animations;
+
+    if (animations) {
+      const animationList = animations.split(' ');
+
+      if (isElementInViewport(element)) {
+        animationList.forEach((animation) => {
+          // Remove delay classes from animations
+          const animationWithoutDelay = animation.replace(/animate__delay-.+s/, '');
+          element.classList.add(animationWithoutDelay);
+        });
+      }
+    }
+  });
+}
+
+// Event listener for scroll events
+window.addEventListener('scroll', handleScrollAnimations);

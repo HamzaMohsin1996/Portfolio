@@ -1,0 +1,27 @@
+.footer-section{
+    @include background-color($grey-clr);
+    @include spacing-both-side(24px,0);
+    @include center-element;
+    @include justify-content(flex-start);
+    @include border-top(1px,solid,$light-grey-clr);
+    .footer-links{
+        @include color($dark-blue);
+        @include text-dec-none;
+        @include text-transform(capitalize);
+        @include margin-top-bottom(0, 25px,0);
+        @include spacing-bottom(5px);
+        @include font-weight(500);
+        @include transition(.3 ease);
+        @include position(relative);
+        &::before{
+            @include position-content(absolute,0,unset,unset,0,23px,2px,$primry-clr);
+            @include display-none;
+            }
+            &:hover{
+             @include color($primry-clr);
+             &::before{
+               @include display(inline-block);
+               }
+            }
+    }
+}
