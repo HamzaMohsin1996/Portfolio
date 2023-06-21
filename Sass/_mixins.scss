@@ -287,3 +287,6 @@
   height: $height;
   background-color: $background-clr;
 }
+@mixin  border-top($size,$state,$color){
+    border-top:$size $state $color;
+}

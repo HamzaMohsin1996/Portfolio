@@ -699,4 +699,42 @@ p {
   font-size: 16px;
   font-weight: 500;
   color: #8B849B;
+}
+
+.footer-section {
+  background-color: #F8F8F8;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  border-top: 1px solid #D5D4DC;
+}
+.footer-section .footer-links {
+  color: #001647;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin: 0 25px 0;
+  padding-bottom: 5px;
+  font-weight: 500;
+  transition: 0.3 ease;
+  position: relative;
+}
+.footer-section .footer-links::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: unset;
+  bottom: 0;
+  right: unset;
+  width: 23px;
+  height: 2px;
+  background-color: #19E58C;
+  display: none;
+}
+.footer-section .footer-links:hover {
+  color: #19E58C;
+}
+.footer-section .footer-links:hover::before {
+  display: inline-block;
 }/*# sourceMappingURL=styles.css.map */

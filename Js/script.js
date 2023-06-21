@@ -59,3 +59,39 @@ window.addEventListener("scroll", function() {
 
   }
 });
+
+// Animation On scroll Style
+ // Function to check if an element is in the viewport
+ function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to handle section scroll animations
+function handleScrollAnimations() {
+  const animatedElements = document.querySelectorAll('.animate__animated');
+
+  animatedElements.forEach((element) => {
+    const animations = element.dataset.animations;
+
+    if (animations) {
+      const animationList = animations.split(' ');
+
+      if (isElementInViewport(element)) {
+        animationList.forEach((animation) => {
+          // Remove delay classes from animations
+          const animationWithoutDelay = animation.replace(/animate__delay-.+s/, '');
+          element.classList.add(animationWithoutDelay);
+        });
+      }
+    }
+  });
+}
+
+// Event listener for scroll events
+window.addEventListener('scroll', handleScrollAnimations);

@@ -18,15 +18,17 @@
    <body>
       <header class="header" id="header-wrapper">
          <div class="container flex-center">
-           <img src="./Images/logo.svg" alt="Logo Image">
+            <a href="#banner-section" class="logo-link">
+               <img src="./Images/logo.svg" alt="Logo Image">
+            </a>
             <nav class="nav navigation-links navmenu-mobile">
                <ul class="flex-center">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Expertise</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Project</a></li>
-                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#banner-section">Home</a></li>
+                  <li><a href="#services-section">Services</a></li>
+                  <li><a href="#skills-section">Expertise</a></li>
+                  <li><a href="#projects-section">Project</a></li>
+                  <li><a href="#testimonials-section">Testimonials</a></li>
+                  <li><a href="#contact-us">Contact us</a></li>
                   <li>
                      <button class="custom-btn-round">
                         <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +58,7 @@
          </div>
       </header>
       <div class="custom-container">
-         <section class="banner-section">
+         <section class="banner-section" id="banner-section">
             <div class="container">
                <div class="row align-items-center">
                   <div class="col-lg-7 animate__animated animate__backInLeft">
@@ -70,16 +72,16 @@
                </div>
             </div>
          </section>
-         <section class="growth-section pb-5" style="background-image: url(./Images/growth-bg-left.svg), url(./Images/growth-bg-right.svg);">
+         <section class="growth-section pb-5" id="services-section" style="background-image: url(./Images/growth-bg-left.svg), url(./Images/growth-bg-right.svg);">
             <div class="medium-container">
                <div class="row align-items-center g-4">
-                  <div class="col-xl-4 animate__animated animate__backInLeft">
+                  <div class="col-xl-4 animate__animated" data-animations="animate__backInLeft">
                      <p class="text-small font-semibold mb-1">Oure Servies</p>
                      <h3 class="font-semibold mb-3">Create Growth for your Business</h3>
                      <p class="text-small text-black mb-xl-5 mb-4">We will empower your business via optimal solution</p>
                      <button class="custom-primary-btn"><span>Get Start Now</span></button>
                   </div>
-                  <div class="col-xl-8 animate__animated animate__backInRight">
+                  <div class="col-xl-8 animate__animated" data-animations="animate__backInRight">
                      <div class="row">
                         <div class="col-sm-6 mb-sm-5 mb-3">
                            <div class="blue-box-wrapper mb-2">
@@ -114,13 +116,13 @@
                </div>
             </div>
             <div class="container text-center">
-               <h2 class="font-500 animate__animated animate__backInLeft"> Web and Mobile App Design & Development to <a href="" class="custom-link-green">Creating your digital footprint around the world</a>, We help brands and businesses increase visibility, engagement, and revenue.</h2>
+               <h2 class="font-500  animate__animated" data-animations="animate__zoomIn"> Web and Mobile App Design & Development to <a href="" class="custom-link-green">Creating your digital footprint around the world</a>, We help brands and businesses increase visibility, engagement, and revenue.</h2>
             </div>
          </section>
-         <section class="department-and-skills-wrapper">
+          <section class="department-and-skills-wrapper " id="skills-section">
             <div class="custom-flex-wrapper-start align-items-start">
                <div class="skills-wrapper-left" style="background-image: url(./Images/skills.svg), linear-gradient(131.35deg, #26289F 11.92%, #2442BA 85.42%)">
-                  <div class="inner-content text-white ms-auto">
+                   <div class="inner-content text-white ms-auto animate__animated" data-animations="animate__backInLeft">
                      <h3 class="font-weight-600 text-white pb-3">Departments and Skills</h3>
                      <span class="text-extra-small">A ultimate partner for future proof digital transformation</span>
                      <ul class="nav nav-pills custom-tabs-links  custom-flex-col mt-4" id="pills-tab" role="tablist">
@@ -143,7 +145,7 @@
                   </div>
                </div>
                <div class="skills-wrapper-right">
-                  <div class="tab-content custom-tabs-content" id="pills-tabContent">
+                  <div class="tab-content custom-tabs-content animate__animated" data-animations="animate__backInRight" id="pills-tabContent">
                      <div class="tab-pane fade show active" id="pills-web-development" role="tabpanel" aria-labelledby="pills-web-development-tab">
                         <div class="row">
                            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-xl-5 mb-3 text-center custom-flex-wrapper-center">
@@ -320,15 +322,15 @@
                </div>
             </div>
          </section>
-         <section class="recent-projects">
-            <div class="header-content text-center">
+         <section class="recent-projects" id="projects-section">
+            <div class="header-content text-center animate__animated" data-animations="animate__zoomIn">
                <div class="container">
                   <p class="text-small text-black-full">Recent Project</p>
                   <h3 class="font-weight-600">Work on big ideas,without<span class="primary-clr"> the busywork</span></h3>
                </div>
             </div>
             <div class="slider-container">
-               <div class="works-slider">
+                <div class="works-slider">
                   <div class="custom-card-wrapper">
                      <img src="./Images/aficash.svg" alt="Afi cash Image">
                      <div class="custom-flex-between my-3">
@@ -368,8 +370,8 @@
                 </div>
             </div>
          </section>
-         <section class="recent-projects testimonials-wrapper">
-            <div class="header-content text-center">
+         <section class="recent-projects testimonials-wrapper" id="testimonials-section">
+            <div class="header-content text-center animate__animated" data-animations="animate__zoomIn">
                <div class="container">
                   <p class="text-small text-black-full">Testimonials</p>
                   <h3 class="font-weight-600">What <span class="primary-clr"> clients love</span> in working
@@ -431,17 +433,19 @@
 
             </div>
          </section>
-         <section class="contact-form-section">
-            <div class="contact-form-left-section">
+         <section class="contact-form-section" id="contact-us">
+             <div class="contact-form-left-section animate__animated" data-animations="animate__backInLeft">
                <img src="./Images/logo.svg" alt="Logo Image" class="mb-5">
                <h5 class="mb-4">Helping you deliver custom & scalable mobile experiences with the potential to change the world.</h5>
                <p class="text-small grey-text">©Copy Right 2021 | All Rights Reserved</p>
             </div>
-            <div class="contact-form-right-section">
-               <p class="text-small text-black-full">Contact Us</p>
+             <div class="contact-form-right-section ">
+               <div class="animate__animated" data-animations="animate__backInRight">
+               <p class="text-small text-black-full ">Contact Us</p>
                <h3 class="font-weight-600 max-width-500 mb-4">What <span class="primary-clr"> clients love</span> in working
                   with The Software House</h3>
-                  <form class="row g-4">
+                  </div>
+                  <form class="row g-4 ">
                      <div class="col-12">
                         <select class="form-select custom-select" aria-label="">
                            <option selected>Open this select menu</option>
@@ -492,6 +496,16 @@
                         <button class="custom-primary-btn"><span>Send Message</span></button>
                      </div>
                   </form>
+            </div>
+         </section>
+         <section class="footer-section">
+            <div class="footer-links-wrapper container">
+               <a href="#banner-section" class="footer-links">Home</a>
+               <a href="#services-section" class="footer-links">Services</a>
+               <a href="#skills-section" class="footer-links">Expertise</a>
+               <a href="#projects-section" class="footer-links">Project</a>
+               <a href="#testimonials-section" class="footer-links">Testimonials</a>
+               <a href="#contact-us" class="footer-links">Contact us</a>
             </div>
          </section>
          <div class="scroll-top-btn">
